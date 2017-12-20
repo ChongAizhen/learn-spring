@@ -1,7 +1,9 @@
 package security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,7 +16,8 @@ public class UserDao {
     private JdbcTemplate jdbcTemplate;
 
     public User findByName(String userName) {
-        return jdbcTemplate.queryForObject("select * from user where userName='"+userName+"'", User.class);
+        RowMapper<User> rw =  BeanPropertyRowMapper.newInstance(User.class);
+        return jdbcTemplate.queryForObject("select * from user where userName='"+userName+"'", rw);
     }
 
     public User addUser(String userName, String passWord) {
