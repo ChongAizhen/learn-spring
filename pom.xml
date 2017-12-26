@@ -150,6 +150,11 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>${springfox-swagger.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.7.0</version>
+        </dependency>
     </dependencies>
 
 
