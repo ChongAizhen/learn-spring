@@ -16,14 +16,14 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="com.shop.po" targetProject="/home/user/learn-spring">
+        <javaModelGenerator targetPackage="com.shop.po" targetProject="/home/user/learn-spring/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.shop.mapper" targetProject="/home/user/learn-spring">
+        <sqlMapGenerator targetPackage="com.shop.mapper" targetProject="/home/user/learn-spring/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.shop.dao" targetProject="/home/user/learn-spring">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.shop.dao" targetProject="/home/user/learn-spring/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         
