@@ -1,6 +1,8 @@
 /**
  * Created by Chong AiZhen on 17-12-31,下午6:37.
  */
+
+//需要javax.mail.jar和javax.mail-api.jar
 @Service
 public class MailService {
 
@@ -11,8 +13,8 @@ public class MailService {
         JavaMailSenderImpl javaMailSender = configSender(session);
         //发送普通邮件
 //        SimpleMailMessage mail = new SimpleMailMessage();
-//        mail.setTo("18363999928@163.com");//收件人邮箱地址
-//        mail.setFrom("noreply@cloud.thundersoft.com");//收件人
+//        mail.setTo("xxx@163.com");//收件人邮箱地址
+//        mail.setFrom("noreply@test.com");//收件人
 //        mail.setSubject("spring自带javamail发送的邮件");//主题
 //        mail.setText("hello this mail is from spring javaMail ");//正文
 //        javaMailSender.send(mail);
@@ -20,8 +22,8 @@ public class MailService {
         //发送模板邮件
         MimeMessage mimeMessage =  javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
-        helper.setFrom("noreply@cloud.thundersoft.com");
-        helper.setTo("18363999928@163.com");
+        helper.setFrom("noreply@test.com");
+        helper.setTo("xxx@163.com");
         helper.setSubject("123");
 
         VelocityEngine velocityEngine = new VelocityEngine();
@@ -45,10 +47,10 @@ public class MailService {
 //        javaMailSender.setPort(cuMailSetting.getMailport());
 //        javaMailSender.setUsername(cuMailSetting.getMailusername());
 //        javaMailSender.setPassword(cuMailSetting.getMailpassword());
-        javaMailSender.setHost("smtpdm.aliyun.com");
+        javaMailSender.setHost("smtpdm.xxx.com");
         javaMailSender.setPort(25);
-        javaMailSender.setUsername("noreply@cloud.thundersoft.com");
-        javaMailSender.setPassword("NoReply890");
+        javaMailSender.setUsername("noreply@test.com");
+        javaMailSender.setPassword("NoReply");
         javaMailSender.setJavaMailProperties(javaMailProperties);
         return javaMailSender;
     }
