@@ -1,10 +1,11 @@
-package security;
+package science.jiangqi.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import science.jiangqi.entity.User;
 
 /**
  * Created by chongaizhen on 2017/12/17.

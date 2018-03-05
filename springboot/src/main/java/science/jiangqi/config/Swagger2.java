@@ -1,4 +1,4 @@
-package security;
+package science.jiangqi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class Swagger2 {
                 .apiInfo(apiInfo())
                 .select()
                 //指定要扫描的包名
-                .apis(RequestHandlerSelectors.basePackage("security"))
+                .apis(RequestHandlerSelectors.basePackage("science/jiangqi/controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

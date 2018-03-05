@@ -1,4 +1,4 @@
-package security;
+package science.jiangqi.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +12,6 @@ public class User {
 
     private String userName;
     private String passWord;
-    private String sex;
+    private String authority;
 
 }

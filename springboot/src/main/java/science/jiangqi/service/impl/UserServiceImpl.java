@@ -1,7 +1,10 @@
-package security;
+package science.jiangqi.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import science.jiangqi.entity.User;
+import science.jiangqi.dao.UserDao;
+import science.jiangqi.service.UserService;
 
 /**
  * Created by chongaizhen on 2017/12/17.
