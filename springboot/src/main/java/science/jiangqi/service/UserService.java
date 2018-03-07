@@ -7,7 +7,5 @@ import science.jiangqi.entity.User;
  */
 public interface UserService {
 
-    User findByName(String userName);
-    User addUser(String userName, String passWord);
-    boolean delUser(String userName);
+    User findByUserName(String userName);
 }

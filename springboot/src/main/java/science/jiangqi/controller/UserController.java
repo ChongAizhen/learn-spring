@@ -25,13 +25,16 @@ public class UserController {
 
     @RequestMapping(value = "/auth/user/{userName}", method = RequestMethod.GET)
     public User getByName(@PathVariable String userName){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        Object a1 = SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        Object a2 = SecurityContextHolder.getContext().getAuthentication().getCredentials();
-        Object a3 = SecurityContextHolder.getContext().getAuthentication().getDetails();
-        SecurityContext securityContext = SecurityContextHolder.getContext();
-        Object a = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return userService.findByName(userName);
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        Object a1 = SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+//        Object a2 = SecurityContextHolder.getContext().getAuthentication().getCredentials();
+//        Object a3 = SecurityContextHolder.getContext().getAuthentication().getDetails();
+//        SecurityContext securityContext = SecurityContextHolder.getContext();
+//        Object a = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        return userService.findByUserName(userName);
+        User user = userService.findByUserName(userName);
+        System.out.println(user.toString());
+        return user;
     }
 
     /**

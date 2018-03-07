@@ -19,7 +19,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/oauth/login").permitAll()
+                .antMatchers("/login").permitAll()
                 .antMatchers("/oauth/logout").permitAll()
                 .and()
                 .authorizeRequests()
@@ -28,12 +28,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout().clearAuthentication(true).invalidateHttpSession(true).logoutUrl("/oauth/logout").logoutSuccessUrl("/oauth/login")
                 .and()
-                .formLogin().loginPage("/oauth/login").permitAll();
+                .formLogin().permitAll();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService()).passwordEncoder(new BCryptPasswordEncoder());
+//        auth.userDetailsService(userDetailsService()).passwordEncoder(new BCryptPasswordEncoder());
+        auth.userDetailsService(userDetailsService());
     }
 
     // 将 AuthenticationManager 注册为 bean , 方便配置 oauth server 的时候使用

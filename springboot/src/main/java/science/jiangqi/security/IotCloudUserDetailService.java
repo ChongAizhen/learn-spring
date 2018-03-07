@@ -27,9 +27,9 @@ public class IotCloudUserDetailService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetails userDetails = null;
         try {
-            science.jiangqi.entity.User user = userService.findByName(username);
+            science.jiangqi.entity.User user = userService.findByUserName(username);
             Collection<GrantedAuthority> authList = getAuthorities(user.getAuthority());
-            userDetails = new User(username, user.getPassWord(), true, true, true, true, authList);
+            userDetails = new User(username, user.getPassword(), true, true, true, true, authList);
         } catch (Exception e) {
             e.printStackTrace();
         }

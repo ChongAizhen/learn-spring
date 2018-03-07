@@ -2,8 +2,9 @@ package science.jiangqi.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import science.jiangqi.dao.UserMapper;
 import science.jiangqi.entity.User;
-import science.jiangqi.dao.UserDao;
+import science.jiangqi.dao.UserDao1;
 import science.jiangqi.service.UserService;
 
 /**
@@ -13,17 +14,9 @@ import science.jiangqi.service.UserService;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserDao userDao;
+    private UserMapper userMapper;
 
-    public User findByName(String userName) {
-        return userDao.findByName(userName);
-    }
-
-    public User addUser(String userName, String passWord) {
-        return null;
-    }
-
-    public boolean delUser(String userName) {
-        return false;
+    public User findByUserName(String userName) {
+        return userMapper.selectByPrimaryKey(userName);
     }
 }
