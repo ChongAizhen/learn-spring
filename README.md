@@ -6,5 +6,7 @@
 使用mybatis生成xml，mapper与entity：
 其中generatorConfigHome.xml与generatorConfigCompany.xml的targetProject路径不同
 
-java -jar E:\Maven_resps\resp\org\mybatis\generator\mybatis-generator-core\1.3.5\mybatis-generator-core-1.3.5.jar -configfile springboot\src\main\resources\generatorConfig.xml -ove
-rwrite
+java -jar E:\Maven_resps\resp\org\mybatis\generator\mybatis-generator-core\1.3.5\mybatis-generator-core-1.3.5.jar -configfile springboot\src\main\resources\generatorConfig.xml -overwrite
+
+
+java -jar /home/user/app/Maven_resps/org/mybatis/generator/mybatis-generator-core/1.3.5/mybatis-generator-core-1.3.5.jar -configfile springboot/src/main/resources/generatorConfig.xml -overwrite
