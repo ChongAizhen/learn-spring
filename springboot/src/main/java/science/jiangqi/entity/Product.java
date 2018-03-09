@@ -5,14 +5,10 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class User {
+public class Product {
     private Integer id;
 
-    private String username;
+    private String productName;
 
-    private String password;
-
-    private String sex;
-
-    private String authority;
+    private Integer productCount;
 }

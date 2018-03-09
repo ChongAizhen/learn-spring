@@ -5,13 +5,13 @@ import science.jiangqi.entity.User;
 
 @Mapper
 public interface UserMapper {
-    int deleteByPrimaryKey(String username);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(User record);
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(String username);
+    User selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(User record);
 
