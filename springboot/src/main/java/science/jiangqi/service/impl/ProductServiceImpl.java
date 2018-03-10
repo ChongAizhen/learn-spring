@@ -2,6 +2,7 @@ package science.jiangqi.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import science.jiangqi.dao.ProductMapper;
 import science.jiangqi.entity.Product;
 import science.jiangqi.service.ProductService;
@@ -27,6 +28,7 @@ public class ProductServiceImpl implements ProductService {
         return 0;
     }
 
+    @Transactional
     public void testTransaction() {
         Product product = new Product();
         product.setProductName("1234");

@@ -1,6 +1,5 @@
 package science.jiangqi.service;
 
-import org.springframework.transaction.annotation.Transactional;
 import science.jiangqi.entity.Product;
 
 /**
@@ -14,7 +13,6 @@ public interface ProductService {
 
     int buyProduct(Product product);
 
-    @Transactional
     void testTransaction();
 
 }
