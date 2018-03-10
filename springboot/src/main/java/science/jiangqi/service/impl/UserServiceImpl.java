@@ -9,6 +9,7 @@ import science.jiangqi.service.UserService;
 /**
  * Created by chongaizhen on 2017/12/17.
  */
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired

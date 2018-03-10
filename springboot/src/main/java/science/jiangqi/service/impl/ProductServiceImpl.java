@@ -1,6 +1,7 @@
 package science.jiangqi.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import science.jiangqi.dao.ProductMapper;
 import science.jiangqi.entity.Product;
 import science.jiangqi.service.ProductService;
@@ -8,6 +9,7 @@ import science.jiangqi.service.ProductService;
 /**
  * Created by chongaizhen on 2018/03/08.
  */
+@Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
