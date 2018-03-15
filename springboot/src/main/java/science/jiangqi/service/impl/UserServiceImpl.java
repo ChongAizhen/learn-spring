@@ -18,4 +18,8 @@ public class UserServiceImpl implements UserService {
     public User findByUserName(String username) {
         return userMapper.selectByPrimaryKey(1);
     }
+
+    public void testTask() {
+        System.out.println("当前时间戳为："+System.currentTimeMillis());
+    }
 }
